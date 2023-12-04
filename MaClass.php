@@ -19,7 +19,13 @@ class MaClass
     public string $prenom;
     public const PI = 3.14;
     public float | int $rayon;
+
     static string $varstatic = 'Je suis une variable statique';
+
+    protected string $varProtected = "Je suis une variable protected" . '<br>';
+
+    private string $_atributePrivate;
+    private string $_nom = 'Michel' . '<br>';
 
     public function displayMethode()
     {
@@ -40,19 +46,16 @@ class MaClass
     {
         return "Méthode statique qui affiche une variable statique" . ' : ' . self::$varstatic . '<br>';
     }
+
+    public function getnom()
+    {
+        return $this->_nom;
+    }
+
+    public function setnom($nom)
+    {
+        $this->_nom = $nom;
+    }
 }
 
-$obj = new MaClass();
-$obj->prenom = 'Michel';
-
-echo $obj->displayMethode('couleur') . '<br>';
-
-$rayonParam = 5;
-$rayon = 4;
-echo 'L\'aire du cercle de rayon ' . $rayon . ' est : ' . $obj->calculAire($rayon) . '<br>';
-
-$rayonParam = 3;
-echo 'L\'aire du cercle de rayon ' . $rayonParam . ' est : ' . $obj->calculAire2($rayonParam) . '<br>';
-
-echo MaClass::staticFunc();
 ?>
