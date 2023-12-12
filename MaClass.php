@@ -5,12 +5,12 @@ class MaClass
 
     public function __construct()
     {
-        echo 'Je suis une méthode magique (__construct) de la classe : ' . __CLASS__ . ' <br>';
+        echo 'Je suis une méthode magique ( __construct ) de la classe : ' . __CLASS__ . ' <br>';
     }
 
     public function __destruct()
     {
-        echo 'Je suis une méthode magique (__destruct) de la classe : ' . __CLASS__ . ' <br>';
+        echo 'Je suis une méthode magique ( __destruct ) de la classe : ' . __CLASS__ . ' <br>';
     }
 
     public string $attributPublic;
