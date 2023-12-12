@@ -25,6 +25,7 @@ class MaClass
     protected string $varProtected = "Je suis une variable protected" . '<br>';
 
     private string $_atributePrivate;
+    
     private string $_nom = 'Michel' . '<br>';
 
     public function displayMethode()
